@@ -1,6 +1,3 @@
-// Copyright (c), Mysten Labs, Inc.
-// SPDX-License-Identifier: Apache-2.0
-
 import React from 'react';
 import { ConnectButton, useCurrentAccount } from '@mysten/dapp-kit';
 import { Box, Button, Card, Container, Flex, Grid } from '@radix-ui/themes';
@@ -41,7 +38,7 @@ function LandingPage() {
             <h2>Subscription Example</h2>
             <p>
               Shows how a creator can define a subscription based access to its published files. The
-              creator defines subcription fee and how long a subscription is valid for. The creator
+              creator defines subscription fee and how long a subscription is valid for. The creator
               can then associate encrypted files to the service. Only users who have purchased a
               subscription (NFT) have access to decrypt the files, along with the condition that the
               subscription must not have expired (i.e. the subscription creation timestamp plus the
@@ -64,28 +61,31 @@ function App() {
   return (
     <Container>
       <Flex position="sticky" px="4" py="2" justify="between">
-        <h1 className="text-4xl font-bold m-4 mb-8">Seal Example Apps</h1>
-        {/* <p>TODO: add seal logo</p> */}
+        <h1 className="text-4xl font-bold m-4 mb-8">Seal Sui by GUYSKID|AIRDROP1412</h1>
         <Box>
           <ConnectButton />
         </Box>
       </Flex>
-      <Card style={{ marginBottom: '2rem' }}>
-        <p>
-          1. Code is available{' '}
-          <a href="https://github.com/MystenLabs/seal/tree/main/examples">here</a>.
-        </p>
-        <p>
-          2. These examples are for Testnet only. Make sure you wallet is set to Testnet and has
-          some balance (can request from <a href="https://faucet.sui.io/">faucet.sui.io</a>).
-        </p>
-        <p>
-          3. Blobs are only stored on Walrus Testnet for 1 epoch by default, older files cannot be
-          retrieved even if you have access.
-        </p>
-        <p>
-          4. Currently only image files are supported, and the UI is minimal, designed for demo
-          purposes only!
+      <Card style={{ marginBottom: '2rem', textAlign: 'center' }}>
+        <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '10px' }}>
+          <img width="200" src="https://github.com/user-attachments/assets/05d6cad8-9d64-4766-8aa0-620cdb8ba152" alt="Main Logo" />
+        </div>
+        <h2 style={{ borderBottom: '2px solid black', paddingBottom: '10px' }}>
+          <b>Community Team</b>
+        </h2>
+        <p style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+          <a href="https://www.airdro1412_guyskid.com" target="_blank" style={{ margin: '0 10px' }}>
+            <img width="50" src="https://github.com/user-attachments/assets/05d6cad8-9d64-4766-8aa0-620cdb8ba152" alt="Website" />
+          </a>
+          <a href="https://t.me/+aEgTx_c4-sgyZTNl" target="_blank" style={{ margin: '0 10px' }}>
+            <img width="50" src="https://github.com/user-attachments/assets/56e7f6ee-18b7-4b36-becc-ec6e4de7bff9" alt="Telegram" />
+          </a>
+          <a href="https://x.com/guyskid008" target="_blank" style={{ margin: '0 10px' }}>
+            <img width="50" src="https://github.com/user-attachments/assets/fbb43aa4-9652-4a49-b984-5cf032b6b1ac" alt="Twitter" />
+          </a>
+          <a href="https://www.youtube.com/@SportOnChain" target="_blank" style={{ margin: '0 10px' }}>
+            <img width="50" src="https://github.com/user-attachments/assets/c15509f9-acb7-49ce-989a-5bac62e7e549" alt="YouTube" />
+          </a>
         </p>
       </Card>
       {currentAccount ? (
